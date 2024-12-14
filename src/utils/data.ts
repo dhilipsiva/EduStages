@@ -1,47 +1,5 @@
 // src/utils/data.ts
-
-export const subjectsData = {
-  "Novice (Introduction)": {
-    "Ages": "3-5",
-    "Subjects": {
-      "Technology and Computer Science": ["Introduction to Computers", "Basic Operations"],
-      "Language Arts": ["Alphabet Recognition", "Basic Vocabulary"]
-      // Add more subjects as needed
-    }
-  },
-  "Beginner (Foundational)": {
-    "Ages": "6-10",
-    "Subjects": {
-      "Technology and Computer Science": ["Basic Programming (Block)", "Digital Literacy"],
-      "Language Arts": ["Basic Reading/Writing", "Simple Grammar"]
-      // Add more subjects as needed
-    }
-  },
-  "Intermediate (Application)": {
-    "Ages": "11-13",
-    "Subjects": {
-      "Technology and Computer Science": ["Introduction to Python", "Basic Rust Syntax"],
-      "Language Arts": ["Intermediate Grammar", "Short Essays"]
-      // Expand as needed
-    }
-  },
-  "Competent (In-Depth)": {
-    "Ages": "14-18",
-    "Subjects": {
-      "Technology and Computer Science": ["Advanced Python (OOP)", "Rust Concurrency"],
-      "Language Arts": ["Literature Analysis", "Advanced Writing"]
-      // Expand as needed
-    }
-  },
-  "Expert (Advanced)": {
-    "Ages": "18+",
-    "Subjects": {
-      "Technology and Computer Science": ["Machine Learning (Python)", "Advanced Rust (Wasm)"],
-      "Language Arts": ["Critical Literary Theory", "Research Writing"]
-      // Expand as needed
-    }
-  }
-};
+import { Stages } from './stages';
 
 /**
  * Calculates approximate age from birth month and year.
@@ -58,16 +16,18 @@ export function calculateAge(monthOfBirth: number, yearOfBirth: number): number 
   return age;
 }
 
-/**
- * Determines age group string from age.
- */
-export function getAgeGroup(age: number): string {
-  if (age >= 3 && age <= 5) return "Novice (Introduction)";
-  if (age >= 6 && age <= 10) return "Beginner (Foundational)";
-  if (age >= 11 && age <= 13) return "Intermediate (Application)";
-  if (age >= 14 && age <= 18) return "Competent (In-Depth)";
-  if (age >= 19) return "Expert (Advanced)";
-  // If younger than 3 or no match, default to Novice
-  return "Novice (Introduction)";
+function inRange(age: number, range: [number, number]){
+  return age >= range[0] && age <= range[1]
 }
-
+/**
+ * Determines age stage id from age.
+ */
+export function getAgeStage(age: number): string {
+  if (inRange(age, Stages.NOVICE.ageRange)) return Stages.NOVICE.id;
+  if (inRange(age, Stages.BEGINNER.ageRange)) return Stages.BEGINNER.id;
+  if (inRange(age, Stages.INTERMEDIATE.ageRange)) return Stages.INTERMEDIATE.id;
+  if (inRange(age, Stages.COMPETENT.ageRange)) return Stages.COMPETENT.id;
+  if (inRange(age, Stages.EXPERT.ageRange)) return Stages.EXPERT.id;
+  // If younger than 3 or no match, default to Novice
+  return stages.NOVICE.id  
+}

@@ -23,7 +23,7 @@ export function AppRouter() {
           {currentProfileName ? (
             <>
               <Route path="/subjects" element={<SubjectList />} />
-              <Route path="/subjects/:subjectName" element={<SubjectDetail />} />
+              <Route path="/subjects/:subjectId" element={<SubjectDetail />} />
             </>
           ) : (
             <Route path="*" element={<Navigate to="/" />} />

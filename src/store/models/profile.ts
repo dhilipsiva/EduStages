@@ -14,7 +14,7 @@ export interface ProfileModel {
   profiles: Profile[];
   setCurrentProfile: Action<ProfileModel, string>;
   setProfiles: Action<ProfileModel, Profile[]>;
-  setOverride: Action<ProfileModel, { profileName: string; overriddenAgeGroup: string }>;
+  setOverride: Action<ProfileModel, { profileName: string; overriddenAgeStage: string }>;
 }
 
 const profileModel: ProfileModel = {
@@ -26,10 +26,10 @@ const profileModel: ProfileModel = {
   setProfiles: action((state, payload) => {
     state.profiles = payload;
   }),
-  setOverride: action((state, { profileName, overriddenAgeGroup }) => {
+  setOverride: action((state, { profileName, overriddenAgeStage }) => {
     const idx = state.profiles.findIndex(p => p.name === profileName);
     if (idx >= 0) {
-      state.profiles[idx].overriddenAgeGroup = overriddenAgeGroup;
+      state.profiles[idx].overriddenAgeStage = overriddenAgeStage;
     }
   })
 };

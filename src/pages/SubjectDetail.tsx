@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useStoreState, useStoreActions } from '../store';
-import { subjectsData, calculateAge, getAgeGroup } from '../utils/data';
+import { calculateAge, getAgeStage } from '../utils/data';
 
 const SubjectDetail: React.FC = () => {
   const { subjectName } = useParams<{ subjectName: string }>();
@@ -20,7 +20,7 @@ const SubjectDetail: React.FC = () => {
 
     const actualAge = calculateAge(profile.monthOfBirth, profile.yearOfBirth);
     const detectedGroup = getAgeGroup(actualAge);
-    const group = profile.overriddenAgeGroup && profile.overriddenAgeGroup !== "" ? profile.overriddenAgeGroup : detectedGroup;
+    const group = profile.overriddenAgeStage && profile.overriddenAgeStage !== "" ? profile.overriddenAgeStage : detectedStage;
 
     const dataForGroup = subjectsData[group];
     const subjectTopics = dataForGroup?.Subjects[subjectName!] || [];

@@ -57,13 +57,13 @@ const Header: React.FC = () => {
     if (!currentProfileName) return;
 
     // Update in store
-    setOverride({ profileName: currentProfileName, overriddenAgeGroup: overrideVal });
+    setOverride({ profileName: currentProfileName, overriddenAgeStage: overrideVal });
 
     // Update profiles in localStorage
     const updated = loadProfiles();
     const idx = updated.findIndex(p => p.name === currentProfileName);
     if (idx > -1) {
-      updated[idx].overriddenAgeGroup = overrideVal;
+      updated[idx].overriddenAgeStage = overrideVal;
       saveProfiles(updated);
       setProfiles(updated);
     }
