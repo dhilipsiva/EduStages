@@ -1,7 +1,7 @@
 // src/subjects/language-arts.ts
 import { Stages } from '../utils/stages';
 
-export const languageArtsDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to the basics of language through alphabet recognition, phonetics, and simple words. The focus is on developing listening and speaking skills, with an emphasis on storytelling, nursery rhymes, and exposure to multiple languages, including Lojban.",

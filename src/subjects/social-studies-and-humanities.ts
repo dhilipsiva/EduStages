@@ -1,7 +1,7 @@
 // src/subjects/social-studies-and-humanities.ts
 import { Stages } from '../utils/stages';
 
-export const socialStudiesAndHumanitiesDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to basic social and cultural concepts, including family, community, and cultural traditions. They also begin exploring maps and simple history stories.",

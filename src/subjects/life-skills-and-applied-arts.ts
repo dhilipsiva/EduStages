@@ -1,7 +1,7 @@
 // src/subjects/life-skills-and-applied-arts.ts
 import { Stages } from '../utils/stages';
 
-export const lifeSkillsAndAppliedArtsDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to basic life skills like sharing, cleaning, and exploring creativity through applied arts such as simple crafting.",

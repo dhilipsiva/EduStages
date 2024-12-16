@@ -1,7 +1,7 @@
 // src/subjects/botany.ts
 import { Stages } from '../utils/stages';
 
-export const botanyDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children explore basic plant life concepts, including the parts of plants, their growth, and the importance of sunlight and water.",

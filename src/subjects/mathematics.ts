@@ -1,7 +1,7 @@
 // src/subjects/mathematics.ts
 import { Stages } from '../utils/stages';
 
-export const mathematicsDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children explore basic concepts of numbers, counting, and shapes. They also begin learning patterns, comparisons, and simple problem-solving through games and activities.",

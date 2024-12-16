@@ -1,7 +1,7 @@
 // src/subjects/physics.ts
 import { Stages } from '../utils/stages';
 
-export const physicsDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to basic physics concepts like motion, light, and gravity. Simple experiments and activities spark curiosity about how the world works.",

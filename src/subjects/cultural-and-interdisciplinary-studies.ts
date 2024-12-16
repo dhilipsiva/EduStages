@@ -1,7 +1,7 @@
 // src/subjects/cultural-and-interdisciplinary-studies.ts
 import { Stages } from '../utils/stages';
 
-export const culturalAndInterdisciplinaryStudiesDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to the basics of culture, diversity, and traditions through storytelling, music, and art. They begin exploring the idea of how people live differently around the world.",

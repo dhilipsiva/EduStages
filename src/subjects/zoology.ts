@@ -1,6 +1,6 @@
 import { Stages } from '../utils/stages';
 
-export const zoologyDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children explore basic animal life concepts, including characteristics of living organisms, habitats, and behaviors.",

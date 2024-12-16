@@ -1,7 +1,7 @@
 // src/subjects/earth-space-and-environmental-sciences.ts
 import { Stages } from '../utils/stages';
 
-export const earthSpaceAndEnvironmentalSciencesDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children explore basic concepts of Earth, space, and the environment. Topics include the Earth's features, weather, and an introduction to the solar system.",

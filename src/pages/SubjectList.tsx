@@ -17,7 +17,7 @@ const SubjectList: React.FC = () => {
 
     const actualAge = calculateAge(profile.monthOfBirth, profile.yearOfBirth);
     const detectedStage = getAgeStage(actualAge);
-    const group = profile.overriddenAgeStage && profile.overriddenAgeStage !== "" ? profile.overriddenAgeStage : detectedStage;
+    // const stage = profile.overriddenAgeStage && profile.overriddenAgeStage !== "" ? profile.overriddenAgeStage : detectedStage;
   }, [currentProfileName, profiles])
 
   const handleSubjectClick = (subjectId) => {

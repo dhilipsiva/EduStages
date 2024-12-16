@@ -1,7 +1,7 @@
 // src/subjects/chemistry.ts
 import { Stages } from '../utils/stages';
 
-export const chemistryDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to the basic building blocks of chemistry, such as elements, mixtures, and simple reactions. Fun experiments and activities spark curiosity about the nature of matter.",

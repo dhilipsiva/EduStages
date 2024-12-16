@@ -1,7 +1,7 @@
 // src/subjects/technology-and-computer-science.ts
 import { Stages } from '../utils/stages';
 
-export const technologyAndComputerScienceDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this introductory stage, children explore basic concepts of what a computer is, learn simple operations (like turning it on/off), and begin recognizing everyday technology. They are also introduced to computational thinking through logical games and multilingual exposure, including Lojban basics.",

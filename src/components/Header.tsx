@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useStoreState, useStoreActions } from '../store';
 import { loadProfiles, saveProfiles, findProfile, updateProfile } from '../utils/storage';
 import { useNavigate } from 'react-router-dom';
+import { Stages } from '../utils/stages';
 
 const Header: React.FC = () => {
   const currentProfileName = useStoreState((state) => state.profile.currentProfileName);
@@ -31,8 +32,8 @@ const Header: React.FC = () => {
   useEffect(() => {
     if (currentProfileName) {
       const p = findProfile(currentProfileName);
-      if (p && p.overriddenAgeGroup) {
-        setLocalAgeOverride(p.overriddenAgeGroup);
+      if (p && p.overriddenAgeStage) {
+        setLocalAgeOverride(p.overriddenAgeStage);
       } else {
         setLocalAgeOverride("");
       }
@@ -86,11 +87,11 @@ const Header: React.FC = () => {
         {currentProfileName && (
           <select value={localAgeOverride} onChange={handleOverrideChange}>
             <option value="">No Override</option>
-            <option value="Novice (Introduction)">Novice (3-5)</option>
-            <option value="Beginner (Foundational)">Beginner (6-10)</option>
-            <option value="Intermediate (Application)">Intermediate (11-13)</option>
-            <option value="Competent (In-Depth)">Competent (14-18)</option>
-            <option value="Expert (Advanced)">Expert (18+)</option>
+            <option value={Stages.NOVICE.id}>{Stages.NOVICE.title}</option>
+            <option value={Stages.BEGINNER.id}>{Stages.BEGINNER.title}</option>
+            <option value={Stages.INTERMEDIATE.id}>{Stages.INTERMEDIATE.title}</option>
+            <option value={Stages.COMPETENT.id}>{Stages.COMPETENT.title}</option>
+            <option value={Stages.EXPERT.id}>{Stages.EXPERT.title}</option>
           </select>
         )}
       </div>

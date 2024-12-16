@@ -6,7 +6,7 @@ export interface Profile {
   name: string;
   monthOfBirth: number;
   yearOfBirth: number;
-  overriddenAgeGroup?: string;
+  overriddenAgeStage?: string;
 }
 
 export interface ProfileModel {

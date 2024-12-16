@@ -1,7 +1,7 @@
 // src/subjects/fine-arts-and-performing-arts.ts
 import { Stages } from '../utils/stages';
 
-export const fineArtsAndPerformingArtsDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children are introduced to basic creative expressions, including drawing, singing, and simple movements. The focus is on exploration and enjoyment.",

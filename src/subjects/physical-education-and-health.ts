@@ -1,7 +1,7 @@
 // src/subjects/physical-education-and-health.ts
 import { Stages } from '../utils/stages';
 
-export const physicalEducationAndHealthDetail = {
+export const data = {
   stages: {
     [Stages.NOVICE.id]: {
       description: "At this stage, children engage in simple physical activities to improve motor skills, coordination, and basic health awareness. The focus is on fun and developing a positive attitude towards movement.",
